@@ -3,6 +3,35 @@
   <groupId>jiantsing</groupId>
   <artifactId>dltest</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <nd4j.version>0.7.2</nd4j.version>
+    <dl4j.version>0.7.2</dl4j.version>
+    <datavec.version>0.7.2</datavec.version>
+    <scala.binary.version>2.10</scala.binary.version>
+  </properties>
+  <dependencies>
+	 <dependency>
+	     <groupId>org.nd4j</groupId>
+	     <artifactId>nd4j-native</artifactId> 
+	     <version>${nd4j.version}</version>
+	 </dependency>
+	 <dependency>
+	     <groupId>org.deeplearning4j</groupId>
+	     <artifactId>dl4j-spark_2.11</artifactId>
+	     <version>${dl4j.version}</version>
+	 </dependency>
+   	 <dependency>
+            <groupId>org.datavec</groupId>
+            <artifactId>datavec-spark_${scala.binary.version}</artifactId>
+            <version>${datavec.version}</version>
+     	</dependency>
+        <dependency>
+	    <groupId>org.deeplearning4j</groupId>
+	    <artifactId>deeplearning4j-core</artifactId>
+	    <version>${dl4j.version}</version>
+	 </dependency>
+  </dependencies>
   <build>
 		<plugins>
 			<plugin>
@@ -19,7 +48,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.jiantsing.test.Test</mainClass>
+									<mainClass>com.jiantsing.test.XorTest</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
