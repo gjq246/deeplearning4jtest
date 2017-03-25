@@ -133,7 +133,7 @@ public class LinearClassify {
         int nTrainPoints = 1000;
         trainIter = new RecordReaderDataSetIterator(rr,nTrainPoints,0,2);//一次性读取1000个数据
         DataSet ds = trainIter.next();
-        PlotUtil.plotTrainingData(ds.getFeatures(), ds.getLabels(), allXYPoints, predictionsAtXYPoints, nPointsPerAxis);
+        PlotUtilCn.plotTrainingData(ds.getFeatures(), ds.getLabels(), allXYPoints, predictionsAtXYPoints, nPointsPerAxis);
 
 
         //Get test data, run the test data through the network to generate predictions, and plot those predictions:
@@ -143,7 +143,7 @@ public class LinearClassify {
         testIter = new RecordReaderDataSetIterator(rrTest,nTestPoints,0,2);
         ds = testIter.next();
         INDArray testPredicted = model.output(ds.getFeatures());
-        PlotUtil.plotTestData(ds.getFeatures(), ds.getLabels(), testPredicted, allXYPoints, predictionsAtXYPoints, nPointsPerAxis);
+        PlotUtilCn.plotTestData(ds.getFeatures(), ds.getLabels(), testPredicted, allXYPoints, predictionsAtXYPoints, nPointsPerAxis);
 
         System.out.println("****************Example finished********************");
 
