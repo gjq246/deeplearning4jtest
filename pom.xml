@@ -9,6 +9,11 @@
     <dl4j.version>0.7.2</dl4j.version>
     <datavec.version>0.7.2</datavec.version>
     <scala.binary.version>2.10</scala.binary.version>
+    
+    <!-- 图表控件 -->
+    <jfreechart.version>1.0.13</jfreechart.version>
+    <jcommon.version>1.0.23</jcommon.version>
+        
   </properties>
   <dependencies>
 	 <dependency>
@@ -31,8 +36,19 @@
 	    <artifactId>deeplearning4j-core</artifactId>
 	    <version>${dl4j.version}</version>
 	 </dependency>
+	 <!-- 图表 Used in the feedforward/classification/MLP* and feedforward/regression/RegressionMathFunctions example -->
+        <dependency>
+            <groupId>jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+            <version>${jfreechart.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jfree</groupId>
+            <artifactId>jcommon</artifactId>
+            <version>${jcommon.version}</version>
+        </dependency>
   </dependencies>
-  <build>
+ <!--  <build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -56,5 +72,5 @@
 				</executions>
 			</plugin>
 		</plugins>
-	</build>
+	</build> -->
 </project>
