@@ -26,10 +26,10 @@ public class MyLenetMnistExample {
 	private static Logger log = LoggerFactory.getLogger(MyLenetMnistExample.class);
 	
 	public static void main(String[] args) throws Exception {
-        int nChannels = 1; // Number of input channels
+        int nChannels = 1; // Number of input channels， 3 if color image  
         int outputNum = 10; // The number of possible outcomes
         int batchSize = 64; // Test batch size
-        int nEpochs = 1; // Number of training epochs
+        int nEpochs = 10; // Number of training epochs
         int iterations = 1; // Number of training iterations
         int seed = 123; //
 
