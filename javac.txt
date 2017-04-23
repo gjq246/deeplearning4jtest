@@ -1,0 +1,6 @@
+Adding all JAR files in a directory
+In Java 6 and higher, one can add all jar-files in a specific directory to the classpath using wildcard notation.
+Windows example:
+java -classpath ".;c:\mylib\*" MyApp
+Linux example:
+java -classpath '.:/mylib/*' MyApp
